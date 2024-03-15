@@ -1,8 +1,8 @@
 exp_name: exp001
-  n_hidden: 100
-  l2: 0.01
-  epochs: 100
-  eta: 1e-5
-  shuffle: True
-  minibatch_size: 100
-  seed: 1
+n_hidden: 100
+l2: 0.01
+epochs: 100
+eta: 1e-5
+shuffle: True
+minibatch_size: 100
+seed: 1
