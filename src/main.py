@@ -14,8 +14,16 @@ from neuralnet import NeuralNetMLP
 
 
 def load_mnist(path: str, kind: str = "train") -> (npt.NDArray, npt.NDArray):
-    labels_path = os.path.join(os.getcwd(), path, "%s-labels-idx1-ubyte" % kind)
-    images_path = os.path.join(os.getcwd(), path, "%s-images-idx3-ubyte" % kind)
+    labels_path = os.path.join(
+        os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
+        path,
+        "%s-labels-idx1-ubyte" % kind,
+    )
+    images_path = os.path.join(
+        os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
+        path,
+        "%s-images-idx3-ubyte" % kind,
+    )
 
     with open(labels_path, "rb") as lbpath:
         magic, n = struct.unpack(">II", lbpath.read(8))
@@ -40,7 +48,7 @@ class Experiment:
     seed: int | None = None
 
 
-@hydra.main(config_path="conf", version_base=None, config_name="exp001")
+@hydra.main(config_path="../conf", version_base=None, config_name="exp001")
 def main(cfg: Experiment):
     n_hidden = cfg.n_hidden
     l2 = cfg.l2
