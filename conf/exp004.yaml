@@ -1,7 +1,7 @@
-exp_name: exp003
+exp_name: exp004
 n_hidden: 100
 l2: 0.01
-epochs: 100
+epochs: 200
 eta: 1e-5
 shuffle: True
 minibatch_size: 100

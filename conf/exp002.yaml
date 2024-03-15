@@ -1,4 +1,4 @@
-exp_name: exp001
+exp_name: exp002
 n_hidden: 100
 l2: 0.01
 epochs: 50
