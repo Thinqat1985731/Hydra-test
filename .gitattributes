@@ -1,0 +1,4 @@
+*.ipynb linguist-documentation=true
+*.py linguist-detectable=true
+*.toml linguist-detectable=true
+*.yml linguist-detectable=true
