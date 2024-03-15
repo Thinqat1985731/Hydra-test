@@ -1,12 +1,15 @@
+# Standard Library
 import os
 import struct
 from dataclasses import dataclass
 
+# Third Party Library
 import hydra
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy as np
 import numpy.typing as npt
 
+# First Party Library
 from neuralnet import NeuralNetMLP
 
 
@@ -25,6 +28,7 @@ def load_mnist(path: str, kind: str = "train") -> (npt.NDArray, npt.NDArray):
 
     return images, labels
 
+
 @dataclass
 class Experiment:
     n_hidden: int
@@ -34,6 +38,7 @@ class Experiment:
     shuffle: bool = True
     minibatch_size: int = 1
     seed: int | None = None
+
 
 @hydra.main(config_path="conf", version_base=None, config_name="exp001")
 def main(cfg: Experiment):
@@ -61,7 +66,7 @@ def main(cfg: Experiment):
     plt.ylabel("Cost")
     plt.xlabel("Epochs")
     plt.plot()
-    plt.savefig("exp001.png")
+    plt.savefig("exp001_cost.png")
 
 
 if __name__ == "__main__":

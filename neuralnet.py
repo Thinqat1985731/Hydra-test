@@ -1,5 +1,7 @@
+# Standard Library
 import sys
 
+# Third Party Library
 import numpy as np
 import numpy.typing as npt
 
@@ -191,9 +193,7 @@ class NeuralNetMLP(object):
                 indices.shape[0] - self.minibatch_size + 1,
                 self.minibatch_size,
             ):
-                batch_idx = indices[
-                    start_idx : start_idx + self.minibatch_size
-                ]
+                batch_idx = indices[start_idx : start_idx + self.minibatch_size]
 
                 # 順伝播
                 z_h, a_h, z_out, a_out = self._forward(X_train[batch_idx])
@@ -203,9 +203,7 @@ class NeuralNetMLP(object):
 
                 sigmoid_derivative_h = a_h * (1.0 - a_h)
 
-                delta_h = (
-                    np.dot(delta_out, self.w_out.T) * sigmoid_derivative_h
-                )
+                delta_h = np.dot(delta_out, self.w_out.T) * sigmoid_derivative_h
 
                 grad_w_h = np.dot(X_train[batch_idx].T, delta_h)
                 grad_b_h = np.sum(delta_h, axis=0)
@@ -232,12 +230,12 @@ class NeuralNetMLP(object):
             y_train_pred = self.predict(X_train)
             y_valid_pred = self.predict(X_valid)
 
-            train_acc = (np.sum(y_train == y_train_pred)).astype(
-                float
-            ) / X_train.shape[0]
-            valid_acc = (np.sum(y_valid == y_valid_pred)).astype(
-                float
-            ) / X_valid.shape[0]
+            train_acc = (np.sum(y_train == y_train_pred)).astype(float) / X_train.shape[
+                0
+            ]
+            valid_acc = (np.sum(y_valid == y_valid_pred)).astype(float) / X_valid.shape[
+                0
+            ]
 
             sys.stderr.write(
                 "\r%0*d/%d | Cost: %.2f "
