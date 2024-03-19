@@ -1,44 +1,18 @@
 # Standard Library
-import os
-import struct
 from dataclasses import dataclass
 
 # Third Party Library
 import hydra
 import matplotlib.pyplot as plt
-import numpy as np
-import numpy.typing as npt
 
 # First Party Library
+from data import load_mnist
 from neuralnet import NeuralNetMLP
-
-
-def load_mnist(path: str, kind: str = "train") -> (npt.NDArray, npt.NDArray):
-    labels_path = os.path.join(
-        os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
-        path,
-        "%s-labels-idx1-ubyte" % kind,
-    )
-    images_path = os.path.join(
-        os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
-        path,
-        "%s-images-idx3-ubyte" % kind,
-    )
-
-    with open(labels_path, "rb") as lbpath:
-        magic, n = struct.unpack(">II", lbpath.read(8))
-        labels = np.fromfile(lbpath, dtype=np.uint8)
-
-    with open(images_path, "rb") as imgpath:
-        magic, num, rows, cols = struct.unpack(">IIII", imgpath.read(16))
-        images = np.fromfile(imgpath, dtype=np.uint8).reshape(len(labels), 784)
-        images = ((images / 255.0) - 0.5) * 2  # ピクセル値の正規化
-
-    return images, labels
 
 
 @dataclass
 class Experiment:
+    exp_name: str
     n_hidden: int
     l2: float = 0.0
     epochs: int = 100
@@ -50,6 +24,7 @@ class Experiment:
 
 @hydra.main(config_path="../conf", version_base=None, config_name="exp001")
 def main(cfg: Experiment):
+    exp_name = cfg.exp_name
     n_hidden = cfg.n_hidden
     l2 = cfg.l2
     epochs = cfg.epochs
@@ -74,7 +49,7 @@ def main(cfg: Experiment):
     plt.ylabel("Cost")
     plt.xlabel("Epochs")
     plt.plot()
-    plt.savefig("exp001_cost.png")
+    plt.savefig("outputs/" + exp_name + ".png")
 
 
 if __name__ == "__main__":
