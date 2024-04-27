@@ -1,5 +1,8 @@
 # hydra-test
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cdeb899fec86437cab0a1fa02a5b9056)](https://app.codacy.com/gh/Thinqat1985731/hydra-test?utm_source=github.com&utm_medium=referral&utm_content=Thinqat1985731/hydra-test&utm_campaign=Badge_Grade)
+
+
 Facebook AI Researchが公開しているパラメーター管理ツールhydraを試したコード。ベースとして利用したのは[これ](https://github.com/rasbt/python-machine-learning-book-3rd-edition/tree/master/ch12)。
 
 ## Requirement
