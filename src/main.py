@@ -4,10 +4,10 @@ from dataclasses import dataclass
 # Third Party Library
 import hydra
 import matplotlib.pyplot as plt
+from neuralnet import NeuralNetMLP
 
 # First Party Library
 from data import load_mnist
-from neuralnet import NeuralNetMLP
 
 
 @dataclass
@@ -34,7 +34,6 @@ def main(cfg: Experiment):
     seed = cfg.seed
 
     X_train, y_train = load_mnist("data", kind="train")
-    X_test, y_test = load_mnist("data", kind="t10k")
     print("Data Load Completed!")
 
     nn = NeuralNetMLP(n_hidden, l2, epochs, eta, minibatch_size, shuffle, seed)

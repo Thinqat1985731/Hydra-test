@@ -129,7 +129,7 @@ class NeuralNetMLP(object):
             予測されたクラスラベル
 
         """
-        z_h, a_h, z_out, a_out = self._forward(X)
+        _, _, z_out, _ = self._forward(X)
         y_pred = np.argmax(z_out, axis=1)
         return y_pred
 
@@ -196,7 +196,7 @@ class NeuralNetMLP(object):
                 batch_idx = indices[start_idx : start_idx + self.minibatch_size]
 
                 # 順伝播
-                z_h, a_h, z_out, a_out = self._forward(X_train[batch_idx])
+                _, a_h, _, a_out = self._forward(X_train[batch_idx])
 
                 # 逆伝播
                 delta_out = a_out - y_train_enc[batch_idx]
@@ -223,7 +223,7 @@ class NeuralNetMLP(object):
                 self.b_out -= self.eta * delta_b_out
 
             # 各エポックでの評価
-            z_h, a_h, z_out, a_out = self._forward(X_train)
+            _, _, _, a_out = self._forward(X_train)
 
             cost = self._compute_cost(y_enc=y_train_enc, output=a_out)
 
