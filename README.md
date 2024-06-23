@@ -1,6 +1,13 @@
-# hydra-test
+# hydra-test <!-- omit in toc -->
 
 Facebook AI Researchが公開しているパラメーター管理ツールhydraを試したコード。ベースとして利用したのは[これ](https://github.com/rasbt/python-machine-learning-book-3rd-edition/tree/master/ch12)。
+
+## Table of Contents <!-- omit in toc -->
+
+- [Requirement](#requirement)
+- [Usage](#usage)
+- [Repository Structure](#repository-structure)
+- [Author](#author)
 
 ## Requirement
 
@@ -15,6 +22,31 @@ Facebook AI Researchが公開しているパラメーター管理ツールhydra�
 ```shell
 cd src
 ./main.py
+```
+
+## Repository Structure
+
+``` rawtext
+.
+├─ conf
+│   ├── exp001.yaml
+│   ├── exp002.yaml
+│   ├── exp003.yaml
+│   └── exp004.yaml
+├─ data
+│   ├── t10k-images-idx3-ubyte
+│   ├── t10k-labels-idx1-ubyte
+│   ├── train-images-idx3-ubyte
+│   └── train-labels-idx1-ubyte
+├─ src
+│   ├── __init__.py
+│   ├── data.py
+│   ├── main.py
+│   └── neuralnet.py
+├── .gitattributes
+├── .gitignore
+├── pyproject.toml
+└── README.md
 ```
 
 ## Author
