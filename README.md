@@ -45,7 +45,6 @@ cd src
 │   └── neuralnet.py
 ├── .gitattributes
 ├── .gitignore
-├── pyproject.toml
 └── README.md
 ```
 
