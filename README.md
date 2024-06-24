@@ -1,6 +1,7 @@
 # hydra-test <!-- omit in toc -->
 
 Facebook AI Researchが公開しているパラメーター管理ツールhydraを試したコード。ベースとして利用したのは[これ](https://github.com/rasbt/python-machine-learning-book-3rd-edition/tree/master/ch12)。
+> Ryeではhydra-coreがインストールできない。venvモジュールを用いて仮想環境を生成しpipでインストールする場合は正常にインストールできる。
 
 ## Table of Contents <!-- omit in toc -->
 
