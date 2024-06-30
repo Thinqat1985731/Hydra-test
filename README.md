@@ -1,6 +1,6 @@
-<a id="readme-top"></a> 
+<a id="readme-top"></a>
 
-# hydra-test <!-- omit in toc --> 
+# hydra-test <!-- omit in toc -->
 
 Facebook AI Researchが公開しているパラメーター管理ツールhydraを試しに使ってみたコード。ベースとして利用したのは[これ](https://github.com/rasbt/python-machine-learning-book-3rd-edition/tree/master/ch12)。
 
@@ -18,7 +18,7 @@ Facebook AI Researchが公開しているパラメーター管理ツールhydra�
 
 ### Prerequisites
 
-Ryeではhydra-coreが正常にインストールできないため、venvモジュールの利用を想定している。
+仮想環境について、Ryeではhydra-coreが正常にインストールできないため、venvモジュールの利用を想定している。
 
 ```shell
 python -m venv .venv
@@ -35,8 +35,8 @@ python -m venv .venv
 2. setup.sh又はsetup.ps1を実行し、pipを経由して必要なpythonライブラリをダウンロードする。
 
    ```shell
-   ./shell.sh
-   ./shell.ps1
+   ./setup.sh
+   ./setup.ps1
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
