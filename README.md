@@ -1,20 +1,43 @@
 # hydra-test <!-- omit in toc -->
 
-Facebook AI Researchが公開しているパラメーター管理ツールhydraを試したコード。ベースとして利用したのは[これ](https://github.com/rasbt/python-machine-learning-book-3rd-edition/tree/master/ch12)。
-> Ryeではhydra-coreがインストールできない。venvモジュールを用いて仮想環境を生成しpipでインストールする場合は正常にインストールできる。
+Facebook AI Researchが公開しているパラメーター管理ツールhydraを試しに使ってみたコード。ベースとして利用したのは[これ](https://github.com/rasbt/python-machine-learning-book-3rd-edition/tree/master/ch12)。
 
-## Table of Contents <!-- omit in toc -->
+<details><summary>Table of Contents</summary>
 
-- [Requirement](#requirement)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 - [Usage](#usage)
-- [Repository Structure](#repository-structure)
-- [Author](#author)
+- [Contact](#contact)
 
-## Requirement
+</details>
 
-- hydra
-- numpy
-- matplotlib
+## Getting Started
+
+### Prerequisites
+
+Ryeではhydra-coreが正常にインストールできないため、venvモジュールの利用を想定している。
+
+```shell
+python -m venv .venv
+```
+
+### Installation
+
+1. このリポジトリをクローンする。
+
+   ```shell
+   git clone https://github.com/Thinqat1985731/hydra-test.git
+   ```
+
+2. setup.sh又はsetup.ps1を実行し、pipを経由して必要なpythonライブラリをダウンロードする。
+
+   ```shell
+   ./shell.sh
+   ./shell.ps1
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
@@ -25,33 +48,53 @@ cd src
 ./main.py
 ```
 
-## Repository Structure
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-``` rawtext
-.
-├─ conf
-│   ├── exp001.yaml
-│   ├── exp002.yaml
-│   ├── exp003.yaml
-│   └── exp004.yaml
-├─ data
-│   ├── t10k-images-idx3-ubyte
-│   ├── t10k-labels-idx1-ubyte
-│   ├── train-images-idx3-ubyte
-│   └── train-labels-idx1-ubyte
-├─ src
-│   ├── __init__.py
-│   ├── data.py
-│   ├── main.py
-│   └── neuralnet.py
-├── .gitattributes
-├── .gitignore
-└── README.md
-```
-
-## Author
+## Contact
 
 <div align="center">
-<img src="https://avatars.githubusercontent.com/u/113882060?v=4" width="100" height="100" alt="avator"><br>
-<strong>Thinqat(Thinqat1985731)</strong>
+   <img src="https://avatars.githubusercontent.com/u/113882060?v=4" width="100" height="100" alt="avator"><br>
+   <strong>Thinqat(Thinqat1985731)</strong><br><br>
+
+  <a href="https://github.com/Thinqat1985731" target="_blank">
+  <picture>
+    <source
+      srcset="https://img.shields.io/badge/GitHub-444444.svg?style=for-the-badge&logo=github"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://img.shields.io/badge/GitHub-000000.svg?style=for-the-badge&logo=github"
+      media="(prefers-color-scheme: light)"
+    />
+    <img src="https://img.shields.io/badge/-Github-444444.svg?style=for-the-badge&logo=github" alt="Github"/>
+  </picture>
+  </a>
+  <a href="https://huggingface.co/Thinqat1985731" target="_blank">
+    <picture>
+      <source
+        srcset="https://img.shields.io/badge/Hugging_Face-444444.svg?style=for-the-badge"
+        media="(prefers-color-scheme: dark)"
+      />
+      <source
+        srcset="https://img.shields.io/badge/Hugging_Face-000000.svg?style=for-the-badge"
+        media="(prefers-color-scheme: light)"
+      />
+      <img src="https://img.shields.io/badge/Hugging_Face-444444.svg?style=for-the-badge" alt="Hugging Face"/>
+    </picture>
+  </a>
+  <a href="https://thinqat.vercel.app/" target="_blank">
+    <picture>
+    <source
+      srcset="https://img.shields.io/badge/Myblog-444444.svg?style=for-the-badge&logo=nextdotjs"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://img.shields.io/badge/Myblog-000000.svg?style=for-the-badge&logo=nextdotjs"
+      media="(prefers-color-scheme: light)"
+    />
+    <img src="https://img.shields.io/badge/Myblog-444444.svg?style=for-the-badge&logo=nextdotjs" alt="Myblog"/>
+  </picture>
+  </a>
 </div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
