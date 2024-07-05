@@ -5,11 +5,13 @@
 Facebook AI Researchが公開しているパラメーター管理ツールhydraを試しに使ってみたコード。ベースとして利用したのは[これ](https://github.com/rasbt/python-machine-learning-book-3rd-edition/tree/master/ch12)。
 
 <details><summary>Table of Contents</summary>
+
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
+
 </details>
 
 ## Getting Started
@@ -72,14 +74,14 @@ cd src
   <a href="https://huggingface.co/Thinqat1985731" target="_blank">
     <picture>
       <source
-        srcset="https://img.shields.io/badge/Hugging_Face-444444.svg?style=for-the-badge"
+        srcset="https://img.shields.io/badge/Hugging_Face-444444.svg?style=for-the-badge&logo=huggingface&logoColor=white"
         media="(prefers-color-scheme: dark)"
       />
       <source
-        srcset="https://img.shields.io/badge/Hugging_Face-000000.svg?style=for-the-badge"
+        srcset="https://img.shields.io/badge/Hugging_Face-000000.svg?style=for-the-badge&logo=huggingface&logoColor=white"
         media="(prefers-color-scheme: light)"
       />
-      <img src="https://img.shields.io/badge/Hugging_Face-444444.svg?style=for-the-badge" alt="Hugging Face"/>
+      <img src="https://img.shields.io/badge/Hugging_Face-444444.svg?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face"/>
     </picture>
   </a>
   <a href="https://thinqat.vercel.app/" target="_blank">
