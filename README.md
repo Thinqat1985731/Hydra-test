@@ -84,18 +84,18 @@ cd src
       <img src="https://img.shields.io/badge/Hugging_Face-444444.svg?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face"/>
     </picture>
   </a>
-  <a href="https://thinqat.vercel.app/" target="_blank">
+  <a href="https://thinqat1985731.github.io/myblog/" target="_blank">
     <picture>
-    <source
-      srcset="https://img.shields.io/badge/Myblog-444444.svg?style=for-the-badge&logo=nextdotjs"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://img.shields.io/badge/Myblog-000000.svg?style=for-the-badge&logo=nextdotjs"
-      media="(prefers-color-scheme: light)"
-    />
-    <img src="https://img.shields.io/badge/Myblog-444444.svg?style=for-the-badge&logo=nextdotjs" alt="Myblog"/>
-  </picture>
+      <source
+        srcset="https://img.shields.io/badge/Myblog-444444.svg?style=for-the-badge&logo=jekyll"
+        media="(prefers-color-scheme: dark)"
+      />
+      <source
+        srcset="https://img.shields.io/badge/Myblog-000000.svg?style=for-the-badge&logo=jekyll"
+        media="(prefers-color-scheme: light)"
+      />
+      <img src="https://img.shields.io/badge/Myblog-444444.svg?style=for-the-badge&logo=jekyll" alt="Myblog"/>
+    </picture>
   </a>
 </div>
 
